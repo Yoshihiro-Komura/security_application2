@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>入力チェック&#13;
+1. 入力範囲が0～9であること&#13;
+2. 否認メール 実行有無が『実行する』のときには、督促日数＜否認日数であること&#13;
+いずれの場合も、値をクリアしてエラーメッセージBOXを表示</description>
+        <field>u_dunning_mail_days</field>
+        <global>true</global>
+        <messages/>
+        <name>onChange DB Set for Dunning Days</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	var uB = 'u_boolean';
+	if (isLoading || newValue == oldValue || newValue == '' || g_form.getBooleanValue(uB)) {
+		return;
+	}
+
+	//Type appropriate comment here, and begin script below
+	// Fieldなどを変数で指定し、コードの最適化を共通化する
+	var setField0 = 'u_dunning_mail_days';
+	var setField1 = 'u_denial_mail';
+	var setField2 = 'u_denial_mail_days';
+	var getVal1 = newValue;
+	var getVal2 = g_form.getValue(setField2);
+	var getFlg = g_form.getValue(setField1);
+	var retMsg = '';
+	// Scriptの多重起動防止
+	g_form.setValue(uB, true);
+	// 設定された値が、0～9の範囲でなければ
+	if(getVal1 < 0 || getVal1 > 9) {
+		getVal1 = '';
+		retMsg = '0～9の範囲で指定してください';
+	} else if(getFlg == 1 && (getVal1 >= getVal2)) {
+		getVal1 = '';
+		retMsg = '督促メール 日数は、否認メール 日数より小さい値を指定してください';
+	}
+	// 再代入
+	g_form.setValue(setField0, getVal1);
+	// エラーボックス処理
+	if(retMsg != '') {
+		g_form.showErrorBox(setField0, retMsg);
+	}
+	// Scriptの多重起動防止解除
+	g_form.setValue(uB, false);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-01 08:14:42</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a364ad3b0f744300fd4e758ce1050e89</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>onChange DB Set for Dunning Days</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_a364ad3b0f744300fd4e758ce1050e89</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-01 08:15:43</sys_updated_on>
+        <table>x_136731_security2_db_setting</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

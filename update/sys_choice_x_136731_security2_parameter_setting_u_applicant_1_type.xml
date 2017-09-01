@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_applicant_1_type" table="x_136731_security2_parameter_setting" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_applicant_1_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>使用しない</label>
+            <language>en</language>
+            <name>x_136731_security2_parameter_setting</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 00:07:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cee8b72b0fb04300fd4e758ce1050eb8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 00:07:09</sys_updated_on>
+            <value>0</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_applicant_1_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>テキスト</label>
+            <language>en</language>
+            <name>x_136731_security2_parameter_setting</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 00:07:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ee8b72b0fb04300fd4e758ce1050eba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 00:07:09</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_applicant_1_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>キーワード選択</label>
+            <language>en</language>
+            <name>x_136731_security2_parameter_setting</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 00:07:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ae8b72b0fb04300fd4e758ce1050ebc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 00:07:09</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_applicant_1_type</element>
+            <name>x_136731_security2_parameter_setting</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 00:07:09</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>0ae8b72b0fb04300fd4e758ce1050eba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_applicant_1_type</sys_name>
+            <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+            <sys_update_name>sys_choice_x_136731_security2_parameter_setting_u_applicant_1_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 00:07:09</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

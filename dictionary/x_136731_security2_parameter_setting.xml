@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="パラメータ設定" max_length="40" name="x_136731_security2_parameter_setting" type="collection">
+        <element label="条件 :" max_length="40" name="u_applicant_1_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_1_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_1_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_1_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_1_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+                <element label="キーワード選択" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_2_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_2_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_2_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_2_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_2_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+                <element label="キーワード選択" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_3_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_3_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_3_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_3_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_3_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+                <element label="キーワード選択" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_4_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_4_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_4_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_4_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_4_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+                <element label="キーワード選択" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_5_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_5_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_5_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_5_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_5_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+                <element label="キーワード選択" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_6_condition" type="boolean"/>
+        <element label="初期値：" max_length="40" name="u_applicant_6_initial" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_6_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_6_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="日付" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_applicant_7_condition" type="boolean"/>
+        <element label="初期値：" max_length="40" name="u_applicant_7_initial" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_applicant_7_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_applicant_7_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="日付" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>
+        <element label="作成日" max_length="40" name="u_create_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="作成者" max_length="40" name="u_create_name" read_only="true" type="string"/>
+        <element label="Res Date" max_length="40" name="u_res_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Res Name" max_length="40" name="u_res_name" read_only="true" type="string"/>
+        <element label="更新日" max_length="40" name="u_update_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="更新者" max_length="40" name="u_update_name" read_only="true" type="string"/>
+        <element label="条件 :" max_length="40" name="u_worker_1_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_worker_1_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_worker_1_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_worker_1_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_worker_2_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_worker_2_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_worker_2_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_worker_2_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element label="条件 :" max_length="40" name="u_worker_3_condition" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_worker_3_initial" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="名称　：" max_length="40" name="u_worker_3_name" type="string"/>
+        <element choice="3" default="0" label="選択　：" max_length="40" name="u_worker_3_type" type="integer">
+            <choice>
+                <element label="使用しない" sequence="0" value="0"/>
+                <element label="テキスト" sequence="1" value="1"/>
+            </choice>
+        </element>
+    </element>
+</database>

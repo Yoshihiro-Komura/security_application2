@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_denial_mail" table="x_136731_security2_db_setting" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_denial_mail</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>実行する</label>
+            <language>en</language>
+            <name>x_136731_security2_db_setting</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 07:32:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a3ee1d770f744300fd4e758ce1050e45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 07:32:54</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_denial_mail</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>実行しない</label>
+            <language>en</language>
+            <name>x_136731_security2_db_setting</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 07:32:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>23ee1d770f744300fd4e758ce1050e47</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 07:32:54</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_denial_mail</element>
+            <name>x_136731_security2_db_setting</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 07:32:54</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>ebee1d770f744300fd4e758ce1050e46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_denial_mail</sys_name>
+            <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+            <sys_update_name>sys_choice_x_136731_security2_db_setting_u_denial_mail</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 07:32:54</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

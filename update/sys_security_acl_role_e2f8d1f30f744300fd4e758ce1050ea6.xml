@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-01 07:06:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e2f8d1f30f744300fd4e758ce1050ea6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_136731_security2_db_setting.x_136731_security2.user</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_security_acl display_value="x_136731_security2_db_setting">66f8d1f30f744300fd4e758ce1050ea3</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_e2f8d1f30f744300fd4e758ce1050ea6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-01 07:06:54</sys_updated_on>
+        <sys_user_role display_value="x_136731_security2.user" name="x_136731_security2.user">5aad03430f340300fd4e758ce1050e78</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

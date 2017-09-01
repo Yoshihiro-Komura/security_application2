@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="a21911330f744300fd4e758ce1050e92" sys_domain="global" table="x_136731_security2_db_setting" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>32f861fb0f744300fd4e758ce1050e38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <text>データベース設定</text>
+            <type display_value="Size:200%">0bb12ffd0f200300fd4e758ce1050eb2</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>3af861fb0f744300fd4e758ce1050e38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <text>申請書設定</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>3ef861fb0f744300fd4e758ce1050e38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <text>処理実行設定</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>32f861fb0f744300fd4e758ce1050e38</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>fef861fb0f744300fd4e758ce1050e38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>3af861fb0f744300fd4e758ce1050e38</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>76f861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_document_title</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>f6f861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_infomation</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>7af861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_infomation_link</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>faf861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>7ef861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_section_manager</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>fef861fb0f744300fd4e758ce1050e39</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_zone_manager</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>72f861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>f2f861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>76f861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mail_send_name</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>f6f861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>3ef861fb0f744300fd4e758ce1050e38</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>7af861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>faf861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_dunning_mail</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>7ef861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>fef861fb0f744300fd4e758ce1050e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_dunning_mail_days</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>72f861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>16</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>f2f861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>17</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>76f861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_denial_mail</element>
+            <position>18</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>f6f861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>19</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>7af861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_denial_mail_days</element>
+            <position>20</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 08:16:49</sys_created_on>
+            <sys_id>faf861fb0f744300fd4e758ce1050e3b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_136731_security2_db_setting" sys_domain="global" view="Default view">a21911330f744300fd4e758ce1050e92</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 08:16:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_136731_security2_db_setting</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-01 07:07:27</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a21911330f744300fd4e758ce1050e92</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_136731_security2_db_setting</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+            <sys_update_name>sys_ui_section_a21911330f744300fd4e758ce1050e92</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-01 07:07:27</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

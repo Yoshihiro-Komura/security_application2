@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_136731_security2.RetRecordField</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>RetRecordField</name>
+        <script><![CDATA[var RetRecordField = Class.create();
+RetRecordField.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	retRF: function() {
+		// Tableデータの読み込み共通化
+		// searchSrtが設定されたら、それで並べ替える
+		var recordTbl = this.getParameter('sysparm_tbl') + '';
+		var searchFld = this.getParameter('sysparm_fld') + '';
+		var searchSrt = this.getParameter('sysparm_srt') + '';
+		var getVal = '';
+		var record = new GlideRecord(recordTbl);
+		if(searchSrt != ''){
+			record.orderBy(searchSrt);
+		}
+		record.query();
+		while(record.next()) {
+			getVal += record.getValue(searchFld) + ';;';
+		}
+		gs.addErrorMessage(getVal);
+		return getVal;
+	},
+
+    type: 'retRecordField'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-31 08:05:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>18dc182f0f3c0300fd4e758ce1050e4f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RetRecordField</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_include_18dc182f0f3c0300fd4e758ce1050e4f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-31 08:20:29</sys_updated_on>
+    </sys_script_include>
+</record_update>

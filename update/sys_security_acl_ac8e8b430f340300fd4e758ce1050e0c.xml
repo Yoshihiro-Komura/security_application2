@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description>Default access control on x_136731_security2_application_category_3</description>
+        <name>x_136731_security2_application_category_3</name>
+        <operation display_value="write">write</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-30 07:44:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ac8e8b430f340300fd4e758ce1050e0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_136731_security2_application_category_3</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_security_acl_ac8e8b430f340300fd4e758ce1050e0c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-30 07:44:58</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+</record_update>

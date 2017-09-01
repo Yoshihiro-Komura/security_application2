@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="申請名称" max_length="40" name="x_136731_security2_application_catalog" type="collection">
+        <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_1_conditions" type="integer">
+            <choice>
+                <element label="任意" sequence="0" value="0"/>
+                <element label="必須" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="(名称)" mandatory="true" max_length="40" name="u_applicant_1_type" type="string"/>
+        <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_2_conditions" type="integer">
+            <choice>
+                <element label="任意" sequence="0" value="0"/>
+                <element label="必須" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="所属長" label="(名称)" mandatory="true" max_length="40" name="u_applicant_2_type" type="string"/>
+        <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_3_conditions" type="integer">
+            <choice>
+                <element label="任意" sequence="0" value="0"/>
+                <element label="必須" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="所属部門長" label="(名称)" mandatory="true" max_length="40" name="u_applicant_3_type" type="string"/>
+        <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_4_conditions" type="integer">
+            <choice>
+                <element label="任意" sequence="0" value="0"/>
+                <element label="必須" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="(名称)" mandatory="true" max_length="40" name="u_applicant_4_type" type="string"/>
+        <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_5_conditions" type="integer">
+            <choice>
+                <element label="任意" sequence="0" value="0"/>
+                <element label="必須" sequence="1" value="1"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="(名称)" mandatory="true" max_length="40" name="u_applicant_5_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="申請区分名称" max_length="200" name="u_application_catalog_name" read_only="true" type="string"/>
+        <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>
+        <element label="作成日" max_length="40" name="u_create_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="作成者" max_length="100" name="u_create_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="メールタイトル" mandatory="true" max_length="200" name="u_mail_subject" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="申請区分②" max_length="100" name="u_request" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="申請区分②(並び順)" max_length="10" name="u_request_sort" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="申請区分①" mandatory="true" max_length="100" name="u_resource" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="申請区分①(並び順)" max_length="100" name="u_resource_sort" read_only="true" type="string"/>
+        <element label="Res Date" max_length="40" name="u_res_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Res Name" max_length="40" name="u_res_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" label="申請区分③" mandatory="true" max_length="100" name="u_set" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="申請区分③(並び順)" max_length="10" name="u_set_sort" read_only="true" type="string"/>
+        <element label="更新日" max_length="40" name="u_update_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="更新者" max_length="100" name="u_update_name" read_only="true" type="string"/>
+    </element>
+</database>

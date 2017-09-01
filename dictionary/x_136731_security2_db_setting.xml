@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="データベース設定" max_length="40" name="x_136731_security2_db_setting" type="collection">
+        <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>
+        <element label="作成日" max_length="40" name="u_create_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="作成者" max_length="40" name="u_create_name" read_only="true" type="string"/>
+        <element choice="3" default="2" label="否認メール 実行有無" max_length="40" name="u_denial_mail" type="integer">
+            <choice>
+                <element label="実行する" sequence="0" value="1"/>
+                <element label="実行しない" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="日数" max_length="40" name="u_denial_mail_days" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="申請書タイトル" mandatory="true" max_length="40" name="u_document_title" type="string"/>
+        <element choice="3" default="2" label="督促メール 実行有無" max_length="40" name="u_dunning_mail" type="integer">
+            <choice>
+                <element label="実行する" sequence="0" value="1"/>
+                <element label="実行しない" sequence="1" value="2"/>
+            </choice>
+        </element>
+        <element label="日数" max_length="40" name="u_dunning_mail_days" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="お知らせ内容" max_length="40" name="u_infomation" type="string"/>
+        <element label="お知らせ文章リンク" max_length="1024" name="u_infomation_link" type="url"/>
+        <element attributes="edge_encryption_enabled=true" label="メール送信元 表示名称" mandatory="true" max_length="100" name="u_mail_send_name" type="string"/>
+        <element label="Res Date" max_length="40" name="u_res_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Res Name" max_length="40" name="u_res_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="所属長役職コード" mandatory="true" max_length="5" name="u_section_manager" type="string"/>
+        <element label="更新日" max_length="40" name="u_update_date" read_only="true" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="更新者" max_length="40" name="u_update_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="所属部門長役職コード" mandatory="true" max_length="5" name="u_zone_manager" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>起動時の準備&#13;
+1. 日付と名前の準備&#13;
+2. 申請区分①～③の選択の挿入</description>
+        <field>u_applicant_1_type</field>
+        <global>true</global>
+        <messages/>
+        <name>onLoad  Application Catalog</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	// Type appropriate comment here, and begin script below
+	// Fieldなどを変数で指定し、コードの最適化を共通化する
+	var setField1 = 'u_application_category';
+	var setField2 = 'u_application_category_sort';
+	var setTable1 = 'x_136731_security2_application_category_1';
+	var setTable2 = 'x_136731_security2_application_category_2';
+	var setTable3 = 'x_136731_security2_application_category_3';
+	var formFld1 = 'u_resource';
+	var formFld2 = 'u_request';
+	var formFld3 = 'u_set';
+	// getXMLの形式は、onSubmit()で使えないので、最初に用意しておく。
+	// 用意するFieldは「u_res_date」と「u_res_name」
+	var getDate = new GlideAjax('At_Startup');
+	getDate.addParam('sysparm_name', 'at_Startup');
+	getDate.getXML(populateGetDT);
+
+	// 申請区分①のセット
+	var getF1 = new GlideAjax('RetRecordField');
+	getF1.addParam('sysparm_name', 'retRF');
+	getF1.addParam('sysparm_tbl', setTable1);
+	getF1.addParam('sysparm_fld', setField1);
+	getF1.addParam('sysparm_srt', setField2);
+	getF1.getXML(populateGetF1);
+
+	// 申請区分①のセット
+	var getF2 = new GlideAjax('RetRecordField');
+	getF2.addParam('sysparm_name', 'retRF');
+	getF2.addParam('sysparm_tbl', setTable2);
+	getF2.addParam('sysparm_fld', setField1);
+	getF2.addParam('sysparm_srt', setField2);
+	getF2.getXML(populateGetF2);
+
+	// 申請区分①のセット
+	var getF3 = new GlideAjax('RetRecordField');
+	getF3.addParam('sysparm_name', 'retRF');
+	getF3.addParam('sysparm_tbl', setTable3);
+	getF3.addParam('sysparm_fld', setField1);
+	getF3.addParam('sysparm_srt', setField2);
+	getF3.getXML(populateGetF3);
+
+	function populateGetDT(response) {
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		g_form.setValue('u_res_date', valData[0]);
+		g_form.setValue('u_res_name', valData[1]);
+	}
+
+	function populateGetF1(response) {
+		var fieldSet = formFld1;
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		// 既存データの保存
+		var rsvData = g_form.getValue(fieldSet);
+		// onChangeを抑制
+		g_form.setValue('u_boolean', true);
+		// Fieldのクリアと追加
+		g_form.clearOptions(fieldSet);
+		g_form.addOption(fieldSet, '', '-- 未選択 --');
+		for(var ii = 0; ii < valData.length - 1; ii++) {
+			g_form.addOption(fieldSet, valData[ii], valData[ii]);
+		}
+		// 既存データがあるなら書込み
+		if(rsvData != '') {
+			g_form.setValue(fieldSet, rsvData);
+		}
+		// onChangeの抑制解除
+		g_form.setValue('u_boolean', false);
+	}
+
+	function populateGetF2(response) {
+		var fieldSet = formFld2;
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		// 既存データの保存
+		var rsvData = g_form.getValue(fieldSet);
+		// onChangeを抑制
+		g_form.setValue('u_boolean', true);
+		// Fieldのクリアと追加
+		g_form.clearOptions(fieldSet);
+		g_form.addOption(fieldSet, '', '-- 未選択 --');
+		for(var ii = 0; ii < valData.length - 1; ii++) {
+			g_form.addOption(fieldSet, valData[ii], valData[ii]);
+		}
+		// 既存データがあるなら書込み
+		if(rsvData != '') {
+			g_form.setValue(fieldSet, rsvData);
+		}
+		// onChangeの抑制解除
+		g_form.setValue('u_boolean', false);
+	}
+
+	function populateGetF3(response) {
+		var fieldSet = formFld3;
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		// 既存データの保存
+		var rsvData = g_form.getValue(fieldSet);
+		// onChangeを抑制
+		g_form.setValue('u_boolean', true);
+		// Fieldのクリアと追加
+		g_form.clearOptions(fieldSet);
+		g_form.addOption(fieldSet, '', '-- 未選択 --');
+		for(var ii = 0; ii < valData.length - 1; ii++) {
+			g_form.addOption(fieldSet, valData[ii], valData[ii]);
+		}
+		// 既存データがあるなら書込み
+		if(rsvData != '') {
+			g_form.setValue(fieldSet, rsvData);
+		}
+		// onChangeの抑制解除
+		g_form.setValue('u_boolean', false);
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-08-31 06:45:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1f69c0a70f3c0300fd4e758ce1050eb7</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>onLoad  Application Catalog</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_1f69c0a70f3c0300fd4e758ce1050eb7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-08-31 08:32:47</sys_updated_on>
+        <table>x_136731_security2_application_catalog</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

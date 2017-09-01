@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_applicant_3_conditions" label="(条件)" language="en" table="x_136731_security2_application_catalog">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_applicant_3_conditions</element>
+            <help/>
+            <hint/>
+            <label>(条件)</label>
+            <language>en</language>
+            <name>x_136731_security2_application_catalog</name>
+            <plural>(条件)</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-08-31 06:02:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>609000a30f3c0300fd4e758ce1050e85</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>(条件)</sys_name>
+            <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+            <sys_update_name>sys_documentation_x_136731_security2_application_catalog_u_applicant_3_conditions_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-08-31 06:21:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
