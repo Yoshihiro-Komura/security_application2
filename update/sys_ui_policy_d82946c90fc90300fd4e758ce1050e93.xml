@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_136731_security2_application_form">u_worker_1_rsv_type!=0^EQ<item endquery="false" field="u_worker_1_rsv_type" goto="false" newquery="false" operator="!=" or="false" value="0"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var getVal, getRsv, ii;
+	// フィールドのラベルを登録
+	var setVal ='u_worker_1';
+	// 既存データの保存
+	getRsv = g_form.getValue(setVal);
+	// フィールドの名称を変更
+	g_form.setLabelOf(setVal, g_form.getValue(setVal + '_rsv_name'));
+	// フィールドの必須変更
+	g_form.setMandatory(setVal, g_form.getBooleanValue(setVal + '_rsv_condition'));
+	// 元々登録された値はあったか？
+	if(!(getRsv != '' || getRsv != 'null' || getRsv != 'NULL')){
+		g_form.setValue(setVal, getRsv);
+	} else {
+		// 初期値があるか？
+		getVal = g_form.getValue(setVal + '_rsv_initial');
+		if(getVal != ''){
+			g_form.setValue(setVal, getVal);
+		}
+	}
+}]]></script_true>
+        <set_values/>
+        <short_description>Applicant Form for Worker 1 on Show/Hide</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-05 07:53:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d82946c90fc90300fd4e758ce1050e93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Applicant Form for Worker 1 on Show/Hide</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_ui_policy_d82946c90fc90300fd4e758ce1050e93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-05 07:53:24</sys_updated_on>
+        <table>x_136731_security2_application_form</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

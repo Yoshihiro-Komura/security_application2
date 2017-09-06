@@ -24,7 +24,7 @@
 	// Scriptの多重起動防止
 	g_form.setValue(uB, true);
 	// 設定された値が、5桁でなければ
-	if(getVal.length == 5) {
+	if(getVal.length != 5) {
 		getVal = '';
 		retMsg = '5桁で指定してください';
 	}
@@ -44,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4fe961fb0f744300fd4e758ce1050e67</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>onChange DB Set for Section Manager</sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
@@ -53,7 +53,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_client_4fe961fb0f744300fd4e758ce1050e67</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-09-01 08:26:13</sys_updated_on>
+        <sys_updated_on>2017-09-04 00:25:05</sys_updated_on>
         <table>x_136731_security2_db_setting</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

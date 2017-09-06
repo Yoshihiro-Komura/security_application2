@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="u_applicant_1_rsv_type" label="Applicant 1 Rsv Type" language="en" table="x_136731_security2_application_form">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_applicant_1_rsv_type</element>
+            <help/>
+            <hint/>
+            <label>Applicant 1 Rsv Type</label>
+            <language>en</language>
+            <name>x_136731_security2_application_form</name>
+            <plural>Applicant 1 Rsv Types</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-05 01:10:33</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>e5cde0810f490300fd4e758ce1050e9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Applicant 1 Rsv Type</sys_name>
+            <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+            <sys_update_name>sys_documentation_x_136731_security2_application_form_u_applicant_1_rsv_type_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-05 01:10:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

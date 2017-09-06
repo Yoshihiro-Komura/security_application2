@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>u_applicant_7_input_value</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-05 07:44:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>85e7c2c90fc90300fd4e758ce1050ef7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_applicant_7_input_value</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_85e7c2c90fc90300fd4e758ce1050ef7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-05 07:44:26</sys_updated_on>
+        <table>x_136731_security2_application_form</table>
+        <ui_policy display_value="Application Form for Applicant 7 on Show/Hide">7b9742c90fc90300fd4e758ce1050eb5</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

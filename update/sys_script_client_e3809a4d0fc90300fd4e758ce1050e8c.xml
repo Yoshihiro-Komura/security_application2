@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>申請名称セレクトで、Fieldに値をセット</description>
+        <field>u_application_catalog_name</field>
+        <global>true</global>
+        <messages/>
+        <name>onChange Applicant Form for 申請名称</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	var ii;
+	var uB = 'u_boolean';
+	if (isLoading || g_form.getBooleanValue(uB)) {
+		return;
+	}
+	if (newValue == '') {
+		g_form.clearValue('u_resource');
+		g_form.clearValue('u_resource_sort');
+		g_form.clearValue('u_request');
+		g_form.clearValue('u_request_sort');
+		g_form.clearValue('u_set');
+		g_form.clearValue('u_set_sort');
+		g_form.clearValue('u_mail_subject');
+		for(ii = 1; ii < 6; ii++) {
+			g_form.clearValue('u_applicant_' + ii + '_type');
+			g_form.clearValue('u_applicant_' + ii + '_name');
+			g_form.setMandatory('u_applicant_' + ii + '_conditions', false);
+		}
+		return;
+	}
+
+	//Type appropriate comment here, and begin script below
+	// パラメータ設定の読み込み
+	var getAppSet = new GlideAjax('GetAppCatalog');
+	getAppSet.addParam('sysparm_name', 'getAC');
+	getAppSet.addParam('sysparm_value', newValue);
+	getAppSet.getXML(populateApp);
+	
+	function populateApp(response){
+		var getAPP = response.responseXML.documentElement.getAttribute("answer");
+		// 整理
+		var iniVal = getAPP.split(';:;');
+		var getVal = [];
+		for(ii = 0; ii < iniVal.length; ii++){
+			getVal[ii] = iniVal[ii].split(';;');
+		}
+		g_form.setValue('u_resource', getVal[0][0]);
+		g_form.setValue('u_resource_sort', getVal[0][1]);
+		g_form.setValue('u_request', getVal[0][2]);
+		g_form.setValue('u_request_sort', getVal[0][3]);
+		g_form.setValue('u_set', getVal[0][4]);
+		g_form.setValue('u_set_sort', getVal[0][5]);
+		g_form.setValue('u_mail_subject', getVal[0][6]);
+		for(ii = 1; ii < 6; ii++){
+			g_form.setValue('u_applicant_' + ii + '_type', getVal[ii][0]);
+			g_form.setValue('u_applicant_' + ii + '_conditions', getVal[ii][1]);
+			g_form.setMandatory('u_applicant_' + ii + '_name', getVal[ii][1] == 1);
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-05 08:34:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e3809a4d0fc90300fd4e758ce1050e8c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>onChange Applicant Form for 申請名称</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_e3809a4d0fc90300fd4e758ce1050e8c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 02:28:49</sys_updated_on>
+        <table>x_136731_security2_application_form</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>入力チェック&#13;
+1. 並び順の登録&#13;
+2. 申請区分名称の生成&#13;
+3. 区分③が選択済みであれば、申請区分名称が登録済みでないか調べる</description>
+        <field>u_request</field>
+        <global>true</global>
+        <messages/>
+        <name>onChange Application Catalog for C2</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	var uB = 'u_boolean';
+	if (isLoading || g_form.getBooleanValue(uB)) {
+		return;
+	}
+
+	//Type appropriate comment here, and begin script below
+	// 変数の設定
+	var setField1 = 'u_resource';
+	var setField2 = 'u_request';
+	var setField3 = 'u_set';
+	var setTable0 = 'x_136731_security2_application_catalog';
+	var searchField = 'u_application_category';
+	var setValueField = 'u_application_catalog_name';
+	var retValue = '';
+	// Field値の読込み
+	var getField1 = g_form.getValue(setField1);
+	var getField2 = g_form.getValue(setField2);
+	var getField3 = g_form.getValue(setField3);
+
+	// 対象Fieldの選択と並び順の指定(srcFieldとsetTableを変更する)
+	var srcField = setField2;
+	var setTable1 = 'x_136731_security2_application_category_2';
+	var setFieldS = srcField + '_sort';
+
+	// Fieldの選択値が空白か？
+	if(g_form.getValue(srcField) == '') {
+		// 空白だったら、並び順をクリア
+		g_form.clearValue(setFieldS);
+	}　else {
+		// 空白でなければ、並び順に値を入れる
+		var getSort = new GlideAjax('GetRecordField');
+		getSort.addParam('sysparm_name', 'getRF');
+		getSort.addParam('sysparm_tbl', setTable1);					// 読込むTableの指定
+		getSort.addParam('sysparm_val', newValue);					// 探すキー値の指定
+		getSort.addParam('sysparm_fld1', searchField);				// 捜査対象Filedの指定
+		getSort.addParam('sysparm_fld2', searchField + '_sort');	// 返し値のField指定
+		getSort.getXML(populateSort);
+	}
+	// 申請区分名称の生成
+	if(getField1 != '') {
+		retValue += getField1 + ' ';
+	}
+	if(getField2 != '') {
+		retValue += getField2 + ' ';
+	}
+	if(getField3 != '') {
+		retValue += '(' + getField3 + ')';
+	}
+	g_form.setValue(setValueField, retValue);
+	// 申請区分１と申請区分３が指定されているなら、重複していないかのチェック
+	if(getField1 != '' && getField3 != '' && oldValue != newValue) {
+		var isRC = new GlideAjax('isRecordCheck');
+		isRC.addParam('sysparm_name', 'isRC');
+		isRC.addParam('sysparm_tbl', setTable0);
+		isRC.addParam('sysparm_fld', setValueField);
+		isRC.addParam('sysparm_val', retValue);
+		isRC.getXML(populateAnswer);
+	}
+
+	function populateSort(response) {
+		var sort = response.responseXML.documentElement.getAttribute("answer");
+		g_form.setValue(setFieldS, sort);
+	}
+	function populateAnswer(response) {
+		var ans = response.responseXML.documentElement.getAttribute("answer");
+		if (ans == 'true') {
+			var setMsg = '「申請区分①」' + getField1;
+			if(getField2 != '') setMsg += ' 「申請区分②」' + getField2;
+			setMsg += ' 「申請区分③」' + getField3 + 'は既に登録済みです';
+			g_form.clearValue(setValueField);
+			g_form.showErrorBox(srcField, setMsg);
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-04 06:19:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b1362c740f810300fd4e758ce1050e93</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>onChange Application Catalog for C2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_b1362c740f810300fd4e758ce1050e93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 01:13:50</sys_updated_on>
+        <table>x_136731_security2_application_catalog</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

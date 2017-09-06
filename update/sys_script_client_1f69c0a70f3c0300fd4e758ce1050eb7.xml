@@ -23,6 +23,8 @@
 	var formFld1 = 'u_resource';
 	var formFld2 = 'u_request';
 	var formFld3 = 'u_set';
+	// URLの登録
+	var getURL = location.href;
 	// getXMLの形式は、onSubmit()で使えないので、最初に用意しておく。
 	// 用意するFieldは「u_res_date」と「u_res_name」
 	var getDate = new GlideAjax('At_Startup');
@@ -61,7 +63,12 @@
 
 	function populateGetF1(response) {
 		var fieldSet = formFld1;
-		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		var ansData = response.responseXML.documentElement.getAttribute("answer");
+		var valData = ansData.split(";;");
+		// 読み込みデータがなかった場合
+		if(ansData.length == '') {
+			alert("【申請区分①】を登録してください");
+		}
 		// 既存データの保存
 		var rsvData = g_form.getValue(fieldSet);
 		// onChangeを抑制
@@ -69,7 +76,7 @@
 		// Fieldのクリアと追加
 		g_form.clearOptions(fieldSet);
 		g_form.addOption(fieldSet, '', '-- 未選択 --');
-		for(var ii = 0; ii < valData.length - 1; ii++) {
+		for(var ii = 0; ii < valData.length; ii++) {
 			g_form.addOption(fieldSet, valData[ii], valData[ii]);
 		}
 		// 既存データがあるなら書込み
@@ -82,7 +89,12 @@
 
 	function populateGetF2(response) {
 		var fieldSet = formFld2;
-		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		var ansData = response.responseXML.documentElement.getAttribute("answer");
+		var valData = ansData.split(";;");
+		// 読み込みデータがなかった場合
+		if(ansData.length == '') {
+			alert("【申請区分②】を登録してください");
+		}
 		// 既存データの保存
 		var rsvData = g_form.getValue(fieldSet);
 		// onChangeを抑制
@@ -90,7 +102,7 @@
 		// Fieldのクリアと追加
 		g_form.clearOptions(fieldSet);
 		g_form.addOption(fieldSet, '', '-- 未選択 --');
-		for(var ii = 0; ii < valData.length - 1; ii++) {
+		for(var ii = 0; ii < valData.length; ii++) {
 			g_form.addOption(fieldSet, valData[ii], valData[ii]);
 		}
 		// 既存データがあるなら書込み
@@ -103,7 +115,12 @@
 
 	function populateGetF3(response) {
 		var fieldSet = formFld3;
-		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		var ansData = response.responseXML.documentElement.getAttribute("answer");
+		var valData = ansData.split(";;");
+		// 読み込みデータがなかった場合
+		if(ansData.length == '') {
+			alert("【申請区分③】を登録してください");
+		}
 		// 既存データの保存
 		var rsvData = g_form.getValue(fieldSet);
 		// onChangeを抑制
@@ -111,7 +128,7 @@
 		// Fieldのクリアと追加
 		g_form.clearOptions(fieldSet);
 		g_form.addOption(fieldSet, '', '-- 未選択 --');
-		for(var ii = 0; ii < valData.length - 1; ii++) {
+		for(var ii = 0; ii < valData.length; ii++) {
 			g_form.addOption(fieldSet, valData[ii], valData[ii]);
 		}
 		// 既存データがあるなら書込み
@@ -129,7 +146,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1f69c0a70f3c0300fd4e758ce1050eb7</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>onLoad  Application Catalog</sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
@@ -138,7 +155,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_client_1f69c0a70f3c0300fd4e758ce1050eb7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-31 08:32:47</sys_updated_on>
+        <sys_updated_on>2017-09-04 01:57:36</sys_updated_on>
         <table>x_136731_security2_application_catalog</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

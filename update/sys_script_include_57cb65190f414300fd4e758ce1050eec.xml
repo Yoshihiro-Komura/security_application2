@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_136731_security2.GetAppCatalog</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetAppCatalog</name>
+        <script><![CDATA[var GetAppCatalog = Class.create();
+GetAppCatalog.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getAC: function() {
+		var Record = new GlideRecord("x_136731_security2_application_catalog");
+		var val = this.getParameter('sysparm_value');
+		Record.query();
+		var retVal = '', ii;
+		while(Record.next()){
+			if(Record.getValue('u_application_catalog_name') == val) {
+				retVal += Record.getValue('u_resource') + ';;';
+				retVal += Record.getValue('u_resource_sort') + ';;';
+				retVal += Record.getValue('u_request') + ';;';
+				retVal += Record.getValue('u_request_sort') + ';;';
+				retVal += Record.getValue('u_set') + ';;';
+				retVal += Record.getValue('u_set_sort') + ';;';
+				retVal += Record.getValue('u_mail_subject') + ';:;';
+				for(ii = 1; ii <= 5; ii++) {
+					retVal += Record.getValue('u_applicant_' + ii + '_type') + ';;';
+					retVal += Record.getValue('u_applicant_' + ii + '_conditions');
+					if(ii != 5) retVal += ';:;';
+				}
+				break;
+			}
+		}
+		return retVal;
+	},
+	type: 'GetAppCatalog'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-06 00:37:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>57cb65190f414300fd4e758ce1050eec</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetAppCatalog</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_include_57cb65190f414300fd4e758ce1050eec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 01:52:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

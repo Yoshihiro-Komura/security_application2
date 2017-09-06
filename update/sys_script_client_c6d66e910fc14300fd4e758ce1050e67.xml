@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>更新履歴の管理</description>
+        <field>u_applicant_1_conditions</field>
+        <global>true</global>
+        <messages/>
+        <name>onSubmit Application Form</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+	//Type appropriate comment here, and begin script below
+	var setHistory = [], valHistory = '';
+	var getHistory = g_form.getValue('u_history');
+	//var getState = g_form.getValue('u_state');
+	
+	// 作成中以外であれば、実行しない
+	//if(getState != 1) {
+	//	return false;
+	//}
+
+	// 更新履歴の有無
+	if(getHistory == '') {
+		setHistory.push('<table style="width:100%;">');
+		setHistory.push('<tr>');
+		setHistory.push('<th style="width:25%;">日時</th>');
+		setHistory.push('<th style="width:15%;">種類</th>');
+		setHistory.push('<th style="width:60%;">所属 / 氏名</th>');
+		setHistory.push('</tr>');
+		setHistory.push('<tr>');
+		setHistory.push('<td>' + g_form.getValue('u_res_date') + '</td>');
+		setHistory.push('<td>申請</td>');
+		setHistory.push('<td">' + g_form.getValue('u_res_name') + '</td>');
+		setHistory.push('</tr>');
+		setHistory.push('</table>');
+	} else {
+		setHistory = getHistory.split('</table>');
+		setHistory.push('<tr>');
+		setHistory.push('<td>' + g_form.getValue('u_res_date') + '</td>');
+		setHistory.push('<td>申請2</td>');
+		setHistory.push('<td">' + g_form.getValue('u_res_name') + '</td>');
+		setHistory.push('</tr>');
+		setHistory.push('</table>');
+	}
+	for(var ii = 0; ii < setHistory.length; ii++) {
+		valHistory += setHistory[ii];
+	}
+	g_form.setValue('u_history', valHistory);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-06 05:32:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6d66e910fc14300fd4e758ce1050e67</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>onSubmit Application Form</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_c6d66e910fc14300fd4e758ce1050e67</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 08:29:19</sys_updated_on>
+        <table>x_136731_security2_application_form</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

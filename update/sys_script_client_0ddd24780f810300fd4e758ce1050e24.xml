@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>読み込み時の準備&#13;
+1. 日付とアクセス者名&#13;
+2. 新規作成時のパラメータ設定・データベース設定の読み込み&#13;
+3. 申請名称の読み込み</description>
+        <field>active</field>
+        <global>true</global>
+        <messages/>
+        <name>onLoad Application Form </name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	// Type appropriate comment here, and begin script below
+	var ii;
+	// getXMLの形式は、onSubmit()で使えないので、最初に用意しておく。
+	// 用意するFieldは「u_res_date」と「u_res_name」
+	var getDate = new GlideAjax('At_Startup');
+	getDate.addParam('sysparm_name', 'at_Startup');
+	getDate.getXML(populateGetDT);
+	// 新規作成時ならパラメータ設定とデータベース設定を読込む
+	if(g_form.isNewRecord()) {
+		var setFld1 = new GlideAjax('GetParaSet');
+		setFld1.addParam('sysparm_name', 'getPara');
+		setFld1.getXML(populatePARA);
+		var setFld2 = new GlideAjax('GetDBSet');
+		setFld2.addParam('sysparm_name', 'getDB');
+		setFld2.getXML(populateDBS);
+	}
+	// 申請名称を読込み
+	var setFld3 = new GlideAjax('RetRecordField');
+	setFld3.addParam('sysparm_name', 'retRF');
+	setFld3.addParam('sysparm_tbl', 'x_136731_security2_application_catalog');
+	setFld3.addParam('sysparm_fld', 'u_application_catalog_name');
+	setFld3.addParam('sysparm_srt', '');
+	setFld3.getXML(populateACN);
+
+	// パラメータ設定項目の保存
+	function populatePARA(response) {
+		var iniVal = [], setVal = [];
+		var getPARA = response.responseXML.documentElement.getAttribute("answer");
+		// 整理
+		iniVal = getPARA.split(';:;');
+		for(ii = 0; ii < iniVal.length; ii++){
+			setVal[ii] = iniVal[ii].split(';;');
+		}
+		
+		// UI Policies等で、変化させるキーがあるときは、関連項目の最後に入れる
+		for(ii = 0; ii < 5; ii++){
+			// セット(申請者項目１～５)
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_name', setVal[ii][1]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_key', setVal[ii][2]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_initial', setVal[ii][3]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_condition', setVal[ii][4]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_type', setVal[ii][0]);
+		}
+		for(ii = 5; ii < 7; ii++){
+			// セット(申請者項目６・７)
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_name', setVal[ii][1]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_initial', setVal[ii][2]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_condition', setVal[ii][3]);
+			g_form.setValue('u_applicant_' + (ii + 1) + '_rsv_type', setVal[ii][0]);
+		}
+		for(ii = 7; ii < 10; ii++){
+			// セット(作業者項目１～３)
+			g_form.setValue('u_worker_' + (ii - 6) + '_rsv_name', setVal[ii][1]);
+			g_form.setValue('u_worker_' + (ii - 6) + '_rsv_initial', setVal[ii][2]);
+			g_form.setValue('u_worker_' + (ii - 6) + '_rsv_condition', setVal[ii][3]);
+			g_form.setValue('u_worker_' + (ii - 6) + '_rsv_type', setVal[ii][0]);
+		}
+		// セット(ドキュメントリンク)
+		g_form.setValue('u_document_link', setVal[10][0]);
+	}
+
+	// データベース設定項目の保存
+	function populateDBS(response) {
+		var setVal = [];
+		var getDB = response.responseXML.documentElement.getAttribute("answer");
+		// 整理
+		setVal = getDB.split(';;');
+		// セット
+		g_form.setValue('u_document_title',setVal[0]);
+		g_form.setValue('u_document_infomation',setVal[1]);
+		g_form.setValue('u_document_infomation_link',setVal[2]);
+	}
+
+	// 日付と名前の保存
+	function populateGetDT(response) {
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		g_form.setValue('u_res_date', valData[0]);
+		g_form.setValue('u_res_name', valData[1]);
+		// 依頼日が空白なら
+		if(g_form.getValue('u_request_date') == '') {
+			g_form.setValue('u_request_date', valData[0].substr(0, 10));
+		}
+		// 依頼者氏名が空白なら
+		if(g_form.getValue('u_client_name') == '') {
+			var valDataM = valData[1].split(' / ');
+			g_form.setValue('u_client_name', valDataM[1]);
+			g_form.setValue('u_client_department', valDataM[0]);
+			g_form.setValue('u_client_mail', valData[2]);
+			g_form.setValue('u_client_tel_no', valData[3]);
+		}
+	}
+
+	// 申請名称選択肢の追加(既存値保存含む)
+	function populateACN(response) {
+		var valData = response.responseXML.documentElement.getAttribute("answer").split(";;");
+		// Fieldの設定
+		var setField = 'u_application_catalog_name';
+		// 既存値の保存
+		var rsvValue = g_form.getValue(setField);
+		// 選択肢(Options)のクリアと追加
+		g_form.clearOptions(setField);
+		g_form.addOption(setField, '', '-- 未選択 --');
+		for(ii = 0; ii < valData.length; ii++) {
+			if(valData[ii] != '') {
+				g_form.addOption(setField, valData[ii], valData[ii]);
+			}
+		}
+		if(rsvValue != '') {
+			g_form.setValue(setField, rsvValue, rsvValue);
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-04 06:34:46</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0ddd24780f810300fd4e758ce1050e24</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>onLoad Application Form </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_client_0ddd24780f810300fd4e758ce1050e24</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 08:14:56</sys_updated_on>
+        <table>x_136731_security2_application_form</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

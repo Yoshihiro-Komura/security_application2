@@ -12,14 +12,14 @@ At_Startup.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	at_Startup: function() {
 		// "「日付」;;「アクセスしているユーザーの所属名」 / 「アクセスしているユーザーのディスプレイ名」"の形で、返す
 		// split(";;")で使うことを前提
-		var valDate = new GlideDate();
+		var valDate = new GlideDateTime();
 		var valUser = new gs.getUser();
 		var userRecord = new GlideRecord('sys_user');
 		userRecord.get(valUser.getID());
 		var depaRecord = new GlideRecord('cmn_department');
 		depaRecord.get(userRecord.getValue('department'));
 		
-		return valDate + ";;" + depaRecord.getValue('name') + " / " + valUser.getDisplayName();
+		return valDate + ";;" + depaRecord.getValue('name') + " / " + valUser.getDisplayName() + ';;' + userRecord.getValue('email') + ';;' + userRecord.getValue('phone') + '/' + userRecord.getValue('mobile_phone');
 	},
 
     type: 'At_Startup'
@@ -29,7 +29,7 @@ At_Startup.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_on>2017-08-31 00:36:26</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ed3532530fb80300fd4e758ce1050e26</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>At_Startup</sys_name>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
         <sys_policy>read</sys_policy>
@@ -37,6 +37,6 @@ At_Startup.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_include_ed3532530fb80300fd4e758ce1050e26</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-31 01:07:58</sys_updated_on>
+        <sys_updated_on>2017-09-06 05:00:24</sys_updated_on>
     </sys_script_include>
 </record_update>

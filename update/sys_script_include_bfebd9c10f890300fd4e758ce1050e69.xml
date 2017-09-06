@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_136731_security2.GetParaSet</api_name>
+        <client_callable>true</client_callable>
+        <description>パラメータ設定の読み込み（サーバースクリプト）</description>
+        <name>GetParaSet</name>
+        <script><![CDATA[var GetParaSet = Class.create();
+GetParaSet.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	getPara: function(){
+		var retVal = '', ii;
+		var getParaset = new GlideRecord('x_136731_security2_parameter_setting');
+		getParaset.query();
+		getParaset.next();
+		// 返値のセット(申請者項目１～５)
+		for(ii = 1; ii <= 5; ii++) {
+			retVal += getParaset.getValue('u_applicant_' + ii + '_type') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_name') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_key') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_initial') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_condition') + ';:;';
+		}
+		// 返値のセット(申請者項目６～７)
+		for(ii = 6; ii <= 7; ii++) {
+			retVal += getParaset.getValue('u_applicant_' + ii + '_type') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_name') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_initial') + ';;';
+			retVal += getParaset.getValue('u_applicant_' + ii + '_condition') + ';:;';
+		}
+		// 返値のセット(作業者項目１～３)
+		for(ii = 1; ii <= 3; ii++) {
+			retVal += getParaset.getValue('u_worker_' + ii + '_type') + ';;';
+			retVal += getParaset.getValue('u_worker_' + ii + '_name') + ';;';
+			retVal += getParaset.getValue('u_worker_' + ii + '_initial') + ';;';
+			retVal += getParaset.getValue('u_worker_' + ii + '_condition') + ';:;';
+		}
+		// 返値のセット(ドキュメントリンク)
+		retVal += getParaset.getValue('u_document_link');
+
+		return retVal;
+	},
+	type: 'GetParaSet'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-05 04:40:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>bfebd9c10f890300fd4e758ce1050e69</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetParaSet</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_include_bfebd9c10f890300fd4e758ce1050e69</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-05 04:45:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

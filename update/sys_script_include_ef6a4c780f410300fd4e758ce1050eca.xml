@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_136731_security2.GetRecordField</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetRecordField</name>
+        <script><![CDATA[var GetRecordField = Class.create();
+GetRecordField.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getRF: function() {
+		// Tableデータの読み込み共通化
+		// searchSrtが設定されたら、それで並べ替える
+		var recordTbl = this.getParameter('sysparm_tbl') + '';
+		var searchFld1 = this.getParameter('sysparm_fld1') + '';
+		var searchFld2 = this.getParameter('sysparm_fld2') + '';
+		var searchVal = this.getParameter('sysparm_val') + '';
+		var getVal = '';
+		var record = new GlideRecord(recordTbl);
+		record.query();
+		while(record.next()) {
+			if(searchVal == record.getValue(searchFld1)) {
+				getVal = record.getValue(searchFld2);
+				break;
+			}
+		}
+		return getVal;
+	},
+
+    type: 'GetRecordField'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-04 04:04:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ef6a4c780f410300fd4e758ce1050eca</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>GetRecordField</sys_name>
+        <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
+        <sys_update_name>sys_script_include_ef6a4c780f410300fd4e758ce1050eca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-06 01:25:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

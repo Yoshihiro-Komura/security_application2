@@ -34,7 +34,7 @@
 	if(getVal1 < 0 || getVal1 > 9) {
 		getVal1 = '';
 		retMsg = '0～9の範囲で指定してください';
-	} else if(getFlg == 1 && (getVal1 >= getVal2)) {
+	} else if(getFlg == 1 && (getVal1 <= getVal2)) {
 		getVal1 = '';
 		retMsg = '督促メール 日数は、否認メール 日数より小さい値を指定してください';
 	}
@@ -54,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df39e1fb0f744300fd4e758ce1050e91</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>onChange DB Set for Denial Days</sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_client_df39e1fb0f744300fd4e758ce1050e91</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-09-01 08:20:04</sys_updated_on>
+        <sys_updated_on>2017-09-04 00:28:25</sys_updated_on>
         <table>x_136731_security2_db_setting</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

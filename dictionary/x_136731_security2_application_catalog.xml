@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="申請名称" max_length="40" name="x_136731_security2_application_catalog" type="collection">
+    <element extends="task" label="申請名称" max_length="40" name="x_136731_security2_application_catalog" sizeclass="2" type="collection">
         <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_1_conditions" type="integer">
             <choice>
                 <element label="任意" sequence="0" value="0"/>
@@ -36,7 +36,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" label="(名称)" mandatory="true" max_length="40" name="u_applicant_5_type" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="申請区分名称" max_length="200" name="u_application_catalog_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="申請区分名称" mandatory="true" max_length="200" name="u_application_catalog_name" type="string"/>
         <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>
         <element label="作成日" max_length="40" name="u_create_date" read_only="true" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="作成者" max_length="100" name="u_create_name" read_only="true" type="string"/>
