@@ -68,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e3809a4d0fc90300fd4e758ce1050e8c</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>onChange Applicant Form for 申請名称</sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
@@ -77,7 +77,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_client_e3809a4d0fc90300fd4e758ce1050e8c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-09-06 02:28:49</sys_updated_on>
+        <sys_updated_on>2017-09-07 00:27:52</sys_updated_on>
         <table>x_136731_security2_application_form</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

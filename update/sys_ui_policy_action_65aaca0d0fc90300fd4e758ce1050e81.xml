@@ -19,7 +19,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-09-05 07:56:32</sys_updated_on>
         <table>x_136731_security2_application_form</table>
-        <ui_policy display_value="Applicant Form for Worker 3 on Show/Hide">253ace890fc90300fd4e758ce1050e28</ui_policy>
+        <ui_policy display_value="Application Form for Worker 3 on Show/Hide">253ace890fc90300fd4e758ce1050e28</ui_policy>
         <visible>true</visible>
     </sys_ui_policy_action>
 </record_update>

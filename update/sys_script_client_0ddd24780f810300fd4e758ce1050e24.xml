@@ -16,6 +16,7 @@
         <script><![CDATA[function onLoad() {
 	// Type appropriate comment here, and begin script below
 	var ii;
+	var uB = 'u_boolean';
 	// getXMLの形式は、onSubmit()で使えないので、最初に用意しておく。
 	// 用意するFieldは「u_res_date」と「u_res_name」
 	var getDate = new GlideAjax('At_Startup');
@@ -113,6 +114,7 @@
 		var setField = 'u_application_catalog_name';
 		// 既存値の保存
 		var rsvValue = g_form.getValue(setField);
+		g_form.setValue(uB, true);
 		// 選択肢(Options)のクリアと追加
 		g_form.clearOptions(setField);
 		g_form.addOption(setField, '', '-- 未選択 --');
@@ -124,6 +126,8 @@
 		if(rsvValue != '') {
 			g_form.setValue(setField, rsvValue, rsvValue);
 		}
+		g_form.setMandatory(setField, true);
+		g_form.setValue(uB, false);
 	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
@@ -133,7 +137,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0ddd24780f810300fd4e758ce1050e24</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_name>onLoad Application Form </sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
@@ -142,7 +146,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_script_client_0ddd24780f810300fd4e758ce1050e24</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-09-06 08:14:56</sys_updated_on>
+        <sys_updated_on>2017-09-07 01:09:43</sys_updated_on>
         <table>x_136731_security2_application_form</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

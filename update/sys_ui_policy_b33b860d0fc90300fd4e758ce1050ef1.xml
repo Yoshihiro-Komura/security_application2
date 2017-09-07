@@ -21,7 +21,7 @@
 	g_form.setLabelOf('u_document_infomation_link', '');
 }]]></script_true>
         <set_values/>
-        <short_description>Applicant Form for Document</short_description>
+        <short_description>Applicationt Form for Document</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-09-05 08:00:15</sys_created_on>
@@ -29,8 +29,8 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b33b860d0fc90300fd4e758ce1050ef1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Applicant Form for Document</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Applicationt Form for Document</sys_name>
         <sys_overrides/>
         <sys_package display_value="Security Apprication 2" source="x_136731_security2">82ad874f0ff00300fd4e758ce1050e5c</sys_package>
         <sys_policy/>
@@ -38,7 +38,7 @@
         <sys_scope display_value="Security Apprication 2">82ad874f0ff00300fd4e758ce1050e5c</sys_scope>
         <sys_update_name>sys_ui_policy_b33b860d0fc90300fd4e758ce1050ef1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-09-05 08:00:15</sys_updated_on>
+        <sys_updated_on>2017-09-07 00:13:25</sys_updated_on>
         <table>x_136731_security2_application_form</table>
         <ui_type>10</ui_type>
         <view/>

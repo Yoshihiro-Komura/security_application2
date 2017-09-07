@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="申請名称" max_length="40" name="x_136731_security2_application_catalog" sizeclass="2" type="collection">
+    <element extends="task" label="申請名称" max_length="40" name="x_136731_security2_application_catalog" type="collection">
         <element choice="3" default="0" label="(条件)" max_length="40" name="u_applicant_1_conditions" type="integer">
             <choice>
                 <element label="任意" sequence="0" value="0"/>
