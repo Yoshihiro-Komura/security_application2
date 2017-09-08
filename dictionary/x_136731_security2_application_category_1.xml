@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="申請区分①" max_length="40" name="x_136731_security2_application_category_1" type="collection">
+    <element extends="task" label="申請区分①" max_length="40" name="x_136731_security2_application_category_1" sizeclass="3" type="collection">
         <element attributes="edge_encryption_enabled=true" label="名称：" mandatory="true" max_length="100" name="u_application_category" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="並び順：" mandatory="true" max_length="10" name="u_application_category_sort" type="string"/>
         <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>

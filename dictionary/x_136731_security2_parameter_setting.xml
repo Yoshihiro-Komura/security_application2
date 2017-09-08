@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="パラメータ設定" max_length="40" name="x_136731_security2_parameter_setting" type="collection">
+    <element extends="task" label="パラメータ設定" max_length="40" name="x_136731_security2_parameter_setting" sizeclass="1" type="collection">
         <element label="条件 :" max_length="40" name="u_applicant_1_condition" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="初期値：" max_length="40" name="u_applicant_1_initial" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="選択肢：" max_length="40" name="u_applicant_1_key" type="string"/>

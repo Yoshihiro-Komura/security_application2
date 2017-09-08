@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="データベース設定" max_length="40" name="x_136731_security2_db_setting" type="collection">
+    <element extends="task" label="データベース設定" max_length="40" name="x_136731_security2_db_setting" sizeclass="1" type="collection">
         <element label="Boolean" max_length="40" name="u_boolean" type="boolean"/>
         <element label="作成日" max_length="40" name="u_create_date" read_only="true" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="作成者" max_length="40" name="u_create_name" read_only="true" type="string"/>
